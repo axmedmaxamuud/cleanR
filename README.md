@@ -11,7 +11,7 @@ data cleaning.
 
 ## Installation
 
-You can install the development version of cleanR from GitHub with:
+You can install the development version of cleanR from GitHub:
 
 ``` r
 # install.packages("devtools")
@@ -28,5 +28,12 @@ later to save the observation with issues.
 ``` r
 library(cleanR)
 
+# create the logbook
 my_logbook <- logbook()
+
+# inspect the head of the logbook
+head(my_logbook)
+#> [1] uuid          question.name issue         feedback      action       
+#> [6] old.value     new.value    
+#> <0 rows> (or 0-length row.names)
 ```

@@ -22,7 +22,7 @@ The goal of cleanR is to provide some functionalists that can facilitate data cl
 
 ## Installation
 
-You can install the development version of cleanR from GitHub with:
+You can install the development version of cleanR from GitHub:
 
 ``` r
 # install.packages("devtools")
@@ -38,7 +38,15 @@ This is a basic example of creating a blank logbook that you can use it later to
 ```{r example}
 library(cleanR)
 
+# create the logbook
 my_logbook <- logbook()
 
+# inspect the head of the logbook
+head(my_logbook)
+
 ```
+
+
+
+
 
