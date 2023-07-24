@@ -11,17 +11,22 @@ data cleaning.
 
 ## Installation
 
-You can install the development version of cleanR like so:
+You can install the development version of cleanR from GitHub with:
 
 ``` r
-# FILL THIS IN! HOW CAN PEOPLE INSTALL YOUR DEV PACKAGE?
+# install.packages("devtools")
+remotes::install_github("axmedmaxamuud/cleanR")
 ```
 
-## Example
+## Examples
 
-This is a basic example which shows you how to solve a common problem:
+### Create blank logbook
+
+This is a basic example of creating a blank logbook that you can use it
+later to save the observation with issues.
 
 ``` r
 library(cleanR)
-## basic example code
+
+my_logbook <- logbook()
 ```
