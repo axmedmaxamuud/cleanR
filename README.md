@@ -20,7 +20,7 @@ remotes::install_github("axmedmaxamuud/cleanR")
 
 ## Examples
 
-### Create blank logbook
+### Step 1: Create blank logbook
 
 This is a basic example of creating a blank logbook that you can use it
 later to save the observation with issues.
@@ -37,3 +37,8 @@ head(my_logbook)
 #> [6] old.value     new.value    
 #> <0 rows> (or 0-length row.names)
 ```
+
+### Step 2: Log issues in the logbook
+
+Now you can inspect the data and use the log_issue() to write the
+observations of the data that you find with the issues in the logbook.
