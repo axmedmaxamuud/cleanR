@@ -1,7 +1,7 @@
 Package: cleanR
 Type: Package
 Title: Harmonized Appraoch of Cleaning Data in R
-Version: 1
+Version: 0.1.0
 Author: Ahmed Mohamoud <ahmed.mohamoud@wfp.org>
 Maintainer: Ahmed Mohamoud <ahmed.mohamoud@wfp.org>
 Description: this package will provide some functionalists that will facilitate data cleaning.
