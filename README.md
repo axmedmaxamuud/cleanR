@@ -8,9 +8,9 @@
 
 **cleanR** is data cleaning tool designed to simplify and enhance WFP
 data cleaning process. it enables users to load raw data and perform
-essential data quality checks including survey time taken,
+essential data quality checks including survey time completion,
 identification of missing data points, handling of non-standard
-responses, detection of outlines, pinpointing inconsistencies and
+responses, detection of outliers, pinpointing inconsistencies and
 validation of GPS coordinates. the package adopts variable naming
 standards from the [WFP Survey
 Designer](https://www.surveydesigner.vam.wfp.org/) for consistency and
