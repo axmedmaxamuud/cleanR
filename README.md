@@ -6,8 +6,16 @@
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of cleanR is to provide some functionalists that can facilitate
-data cleaning.
+**cleanR** is data cleaning tool designed to simplify and enhance WFP
+data cleaning process. it enables users to load raw data and perform
+essential data quality checks including survey time taken,
+identification of missing data points, handling of non-standard
+responses, detection of outlines, pinpointing inconsistencies and
+validation of GPS coordinates. the package adopts variable naming
+standards from the [WFP Survey
+Designer](https://www.surveydesigner.vam.wfp.org/) for consistency and
+compatibility. at the end, users can efficiently prepare their data for
+analysis. ensuring accuracy and reliability.
 
 ## Installation
 
@@ -18,7 +26,7 @@ You can install the development version of cleanR from GitHub:
 remotes::install_github("axmedmaxamuud/cleanR")
 ```
 
-## Examples
+## Usage
 
 ### Step 1: Create blank logbook
 
@@ -81,3 +89,19 @@ head(my_logbook)
 #> 3 respondent is under 15 years old          delete        13          
 #> 4 respondent is under 15 years old          delete        14
 ```
+
+## Feedback & Contributions
+
+we welcome your feedback and contributions to make cleanR even more
+interactive and robust. feel free to report issues or contribute to the
+project by making pull request.
+
+## Reference
+
+This work draws inspiration from the
+[HighFrequencyChecks](https://unhcr.github.io/HighFrequencyChecks/docs/),
+[IMPACT
+cleaninginspectoR](https://github.com/impact-initiatives/cleaninginspectoR)
+and [WFP DataBreiges](https://databridges.vam.wfp.org/). by building on
+the foundation laid by these packages, cleanR seeks to streamline the
+process and make it relevant to WFP programming.
