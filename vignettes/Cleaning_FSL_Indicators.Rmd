@@ -1,0 +1,52 @@
+---
+title: "Cleaning food security indicators"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Cleaning_FSL_Indicators}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup, message=FALSE}
+library(cleanR)
+```
+
+## Step 1: Load data
+
+
+
+
+## Step 2: Format data
+
+
+
+## Step 3: Inspect quality of indicators
+
+
+
+## Step 4: Generate summary reports
+
+
+
+
+## Step 5: Export cleaning log file
+
+
+
+
+
+
+
+
+
+
+
+
+
