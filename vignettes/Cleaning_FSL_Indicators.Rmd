@@ -14,14 +14,20 @@ knitr::opts_chunk$set(
 )
 ```
 
-```{r setup, message=FALSE}
+In this article, we'll explore the crucial process of inspecting and cleaning food security indicators, following the guidelines of the WFP indicator compendium. We ensure data quality by using the cleanR package and Survey Designer, allowing us to understand the reasons behind certain results and take corrective actions during field data collection.
+
+## Step 1: Load packages & data
+
+```{r, echo=TRUE, warning=FALSE, message=FALSE, comment=FALSE}
+
+# required packages
+library(tidyverse)
 library(cleanR)
+
+# load raw data
+moda_data <- cleanR::survey_data
+
 ```
-
-## Step 1: Load data
-
-
-
 
 ## Step 2: Format data
 
