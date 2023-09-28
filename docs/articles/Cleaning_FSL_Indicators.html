@@ -77,11 +77,23 @@
 
     
     
-<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/axmedmaxamuud/cleanR" class="external-link">cleanR</a></span><span class="op">)</span></span></code></pre></div>
+<p>In this article, we’ll explore the crucial process of inspecting and
+cleaning food security indicators, following the guidelines of the WFP
+indicator compendium. We ensure data quality by using the cleanR package
+and Survey Designer, allowing us to understand the reasons behind
+certain results and take corrective actions during field data
+collection.</p>
 <div class="section level2">
-<h2 id="step-1-load-data">Step 1: Load data<a class="anchor" aria-label="anchor" href="#step-1-load-data"></a>
+<h2 id="step-1-load-packages-data">Step 1: Load packages &amp; data<a class="anchor" aria-label="anchor" href="#step-1-load-packages-data"></a>
 </h2>
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span></span>
+<span><span class="co"># required packages</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org" class="external-link">tidyverse</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/axmedmaxamuud/cleanR" class="external-link">cleanR</a></span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># load raw data</span></span>
+<span><span class="va">moda_data</span> <span class="op">&lt;-</span> <span class="fu">cleanR</span><span class="fu">::</span><span class="va"><a href="../reference/survey_data.html">survey_data</a></span></span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="step-2-format-data">Step 2: Format data<a class="anchor" aria-label="anchor" href="#step-2-format-data"></a>
