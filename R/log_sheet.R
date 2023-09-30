@@ -1,4 +1,6 @@
-#' @title log_sheet
+#' log_sheet
+#'
+#' This function is the powerhouse of cleanR, it will reshape your data into a cleaning log shape, just make sure you understood that the question.name variable is the variable that you want to treat/clean. so the old.value should be assocaited with the treating variable.
 #'
 #' @param data this should be survey data in XML value format
 #' @param question.name this will be the variable name

@@ -1,6 +1,8 @@
 
 #' survey time check
 #'
+#' This function will take dataset with start and end times and compute the survey completion time in minutes.
+#'
 #' @param df data frame in XML Values format
 #' @param time_min minimum time to complete the survey
 #' @param time_max maximum time to complete the survey

@@ -3,6 +3,7 @@
 export(check_duplicate_uuid)
 export(check_other_responses)
 export(cleaning_folders)
+export(format_fsl_indicators)
 export(get_na_response_rates)
 export(log_sheet)
 export(logbook)

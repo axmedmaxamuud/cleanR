@@ -1,6 +1,8 @@
 
 #' Check other responses
 #'
+#' This function will flag all other responses provided in the data, make sure to have a list of all other column.
+#'
 #' @param data this should be survey data in XML value format
 #' @param other_columns list of all other responses variables, usually prepare this list from the XLSX tool
 #'

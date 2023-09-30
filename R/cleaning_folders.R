@@ -1,5 +1,7 @@
 #' cleaning folders
 #'
+#' This function will create a working directory for you, first it will check if you have a right working directory, and if so, will return message saying good to go. otherwise, it will crate structured working directory for you.
+#'
 #' @return
 #' @export
 #'

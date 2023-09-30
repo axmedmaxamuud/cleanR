@@ -12,5 +12,5 @@ check_other_responses(data, other_columns)
 \item{other_columns}{list of all other responses variables, usually prepare this list from the XLSX tool}
 }
 \description{
-Check other responses
+This function will flag all other responses provided in the data, make sure to have a list of all other column.
 }

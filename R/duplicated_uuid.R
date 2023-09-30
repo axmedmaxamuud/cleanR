@@ -1,5 +1,7 @@
 #' Check duplicated uuids
 #'
+#' This function will check if there are any duplicated uuids in your data, it will need only data with uui column.
+#'
 #' @param data data in XML values format
 #'
 #' @return

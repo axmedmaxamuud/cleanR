@@ -19,7 +19,7 @@ log_sheet(data, question.name, issue, action)
 A logbook with flagged observations from \code{\link{log_sheet}}
 }
 \description{
-log_sheet
+This function is the powerhouse of cleanR, it will reshape your data into a cleaning log shape, just make sure you understood that the question.name variable is the variable that you want to treat/clean. so the old.value should be assocaited with the treating variable.
 }
 \examples{
 log_sheet()

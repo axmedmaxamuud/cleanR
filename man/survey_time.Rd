@@ -14,5 +14,5 @@ survey_time(df, time_min, time_max)
 \item{time_max}{maximum time to complete the survey}
 }
 \description{
-survey time check
+This function will take dataset with start and end times and compute the survey completion time in minutes.
 }
