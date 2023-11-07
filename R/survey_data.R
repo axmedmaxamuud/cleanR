@@ -7,6 +7,7 @@
 #' \describe{
 #'   \item{start}{survey start time}
 #'   \item{end}{survey end time}
+#'   \item{Area_Office}{Area_Office}
 #'   \item{ADMIN1Name}{date of data collection}
 #'   \item{ADMIN2Name}{ADMIN2Name}
 #'   \item{EnumName}{EnumName}
