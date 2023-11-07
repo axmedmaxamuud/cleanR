@@ -6,12 +6,12 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="description" content="cleanR">
-<title>Cleaning food security indicators • cleanR</title>
+<title>Cleaning Food Security Indicators • cleanR</title>
 <script src="../deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="../deps/bootstrap-5.2.2/bootstrap.min.css" rel="stylesheet">
 <script src="../deps/bootstrap-5.2.2/bootstrap.bundle.min.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
-<!-- bootstrap-toc --><script src="https://cdn.jsdelivr.net/gh/afeld/bootstrap-toc@v1.0.1/dist/bootstrap-toc.min.js" integrity="sha256-4veVQbu7//Lk5TSmc7YV48MxtMy98e26cf5MrgZYnwo=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- search --><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- pkgdown --><script src="../pkgdown.js"></script><meta property="og:title" content="Cleaning food security indicators">
+<!-- bootstrap-toc --><script src="https://cdn.jsdelivr.net/gh/afeld/bootstrap-toc@v1.0.1/dist/bootstrap-toc.min.js" integrity="sha256-4veVQbu7//Lk5TSmc7YV48MxtMy98e26cf5MrgZYnwo=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- search --><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- pkgdown --><script src="../pkgdown.js"></script><meta property="og:title" content="Cleaning Food Security Indicators">
 <meta property="og:description" content="cleanR">
 <!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script><!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -41,7 +41,7 @@
 <li class="active nav-item dropdown">
   <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown-articles">Articles</a>
   <div class="dropdown-menu" aria-labelledby="dropdown-articles">
-    <a class="dropdown-item" href="../articles/Cleaning_FSL_Indicators.html">Cleaning food security indicators</a>
+    <a class="dropdown-item" href="../articles/Cleaning_FSL_Indicators.html">Cleaning Food Security Indicators</a>
   </div>
 </li>
       </ul>
@@ -68,7 +68,7 @@
 
 <div class="row">
   <main id="main" class="col-md-9"><div class="page-header">
-      <img src="" class="logo" alt=""><h1>Cleaning food security indicators</h1>
+      <img src="" class="logo" alt=""><h1>Cleaning Food Security Indicators</h1>
             
       
       <small class="dont-index">Source: <a href="https://github.com/axmedmaxamuud/cleanR/blob/HEAD/vignettes/Cleaning_FSL_Indicators.Rmd" class="external-link"><code>vignettes/Cleaning_FSL_Indicators.Rmd</code></a></small>
@@ -77,39 +77,85 @@
 
     
     
-<p>In this article, we’ll explore the crucial process of inspecting and
-cleaning food security indicators, following the guidelines of the WFP
-indicator compendium. We ensure data quality by using the cleanR package
-and Survey Designer, allowing us to understand the reasons behind
-certain results and take corrective actions during field data
-collection.</p>
+<p>In this article, we’ll explore how to clean food security and
+livelihood data using cleanR package. The data needs to be aligned with
+WFP Survey Designer to ensure that variable naming’s are consistent.
+First, we’ll upload the raw data which is the version downloaded from
+the MoDa server. Then we’ll use the calculate_fsl_indicators function to
+compute all the FSL indicators. Then once we have calculated all the
+indicators, we’ll inspect the quality of data and indicator scores and
+generate cleaning log file that will help us collect feedbacks and
+understand the underlying causes of possible issues flagged and at the
+same time capture the correct values for any inconsistencies or mistakes
+identified.</p>
 <div class="section level2">
 <h2 id="step-1-load-packages-data">Step 1: Load packages &amp; data<a class="anchor" aria-label="anchor" href="#step-1-load-packages-data"></a>
 </h2>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span></span>
-<span><span class="co"># required packages</span></span>
+<code class="sourceCode R"><span><span class="co"># required packages</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org" class="external-link">tidyverse</a></span><span class="op">)</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/axmedmaxamuud/cleanR" class="external-link">cleanR</a></span><span class="op">)</span></span>
 <span></span>
 <span><span class="co"># load raw data</span></span>
-<span><span class="va">moda_data</span> <span class="op">&lt;-</span> <span class="fu">cleanR</span><span class="fu">::</span><span class="va"><a href="../reference/survey_data.html">survey_data</a></span></span></code></pre></div>
+<span><span class="va">moda_data</span> <span class="op">&lt;-</span> <span class="fu">cleanR</span><span class="fu">::</span><span class="va"><a href="../reference/survey_data.html">survey_data</a></span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span> <span class="co"># converting HDDS variables to numeric</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html" class="external-link">mutate</a></span><span class="op">(</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/across.html" class="external-link">across</a></span><span class="op">(</span><span class="fu"><a href="https://tidyselect.r-lib.org/reference/starts_with.html" class="external-link">starts_with</a></span><span class="op">(</span><span class="st">"HDDS"</span><span class="op">)</span>, <span class="va">as.numeric</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="step-2-format-data">Step 2: Format data<a class="anchor" aria-label="anchor" href="#step-2-format-data"></a>
 </h2>
+<p>Now we have the raw data, and therefore we will compute indicators so
+we can proceed to run in-depth checks on the data and inspect if there
+is any inconsistency that need to be checked.</p>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">raw_data</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/calculate_fsl_indicators.html">calculate_fsl_indicators</a></span><span class="op">(</span>data <span class="op">=</span> <span class="va">moda_data</span>,</span>
+<span>                                 <span class="co"># FCS</span></span>
+<span>                                 FCSStap <span class="op">=</span> <span class="st">"FCSStap"</span>, </span>
+<span>                                 FCSPulse <span class="op">=</span> <span class="st">"FCSPulse"</span>, </span>
+<span>                                 FCSPr <span class="op">=</span> <span class="st">"FCSPr"</span>, </span>
+<span>                                 FCSVeg <span class="op">=</span> <span class="st">"FCSVeg"</span>, </span>
+<span>                                 FCSFruit <span class="op">=</span> <span class="st">"FCSFruit"</span>,</span>
+<span>                                 FCSDairy <span class="op">=</span> <span class="st">"FCSDairy"</span>, </span>
+<span>                                 FCSFat <span class="op">=</span> <span class="st">"FCSFat"</span>, </span>
+<span>                                 FCSSugar <span class="op">=</span> <span class="st">"FCSSugar"</span>, </span>
+<span>                                 cutoff <span class="op">=</span> <span class="st">"Cat28"</span>, </span>
+<span>                                 <span class="co"># rCSI</span></span>
+<span>                                 rCSILessQlty <span class="op">=</span> <span class="st">"rCSILessQlty"</span>, </span>
+<span>                                 rCSIBorrow <span class="op">=</span> <span class="st">"rCSIBorrow"</span>, </span>
+<span>                                 rCSIMealSize <span class="op">=</span> <span class="st">"rCSIMealSize"</span>, </span>
+<span>                                 rCSIMealAdult <span class="op">=</span> <span class="st">"rCSIMealAdult"</span>, </span>
+<span>                                 rCSIMealNb <span class="op">=</span> <span class="st">"rCSIMealNb"</span>,</span>
+<span>                                 <span class="co"># HHS</span></span>
+<span>                                 HHhSNoFood_FR <span class="op">=</span> <span class="st">"HHhSNoFood_FR"</span>, </span>
+<span>                                 HHhSBedHung_FR <span class="op">=</span> <span class="st">"HHhSBedHung_FR"</span>, </span>
+<span>                                 HHhSNotEat_FR <span class="op">=</span> <span class="st">"HHhSNotEat_FR"</span>, </span>
+<span>                                 <span class="co"># HDDS</span></span>
+<span>                                 <span class="co"># HDDSStapCer = "HDDSStapCer", </span></span>
+<span>                                 <span class="co"># HDDSStapRoot = "HDDSStapRoot", </span></span>
+<span>                                 <span class="co"># HDDSVeg = "HDDSVeg", </span></span>
+<span>                                 <span class="co"># HDDSFruit = "HDDSFruit", </span></span>
+<span>                                 <span class="co"># HDDSPrMeat = "HDDSPrMeat", </span></span>
+<span>                                 <span class="co"># HDDSPrEgg = "HDDSPrEgg", </span></span>
+<span>                                 <span class="co"># HDDSPrFish = "HDDSPrFish", </span></span>
+<span>                                 <span class="co"># HDDSPulse = "HDDSPulse", </span></span>
+<span>                                 <span class="co"># HDDSDairy = "HDDSDairy", </span></span>
+<span>                                 <span class="co"># HDDSFat = "HDDSFat", </span></span>
+<span>                                 <span class="co"># HDDSSugar = "HDDSSugar", </span></span>
+<span>                                 <span class="co"># HDDSCond = "HDDSCond"</span></span>
+<span>                                 <span class="op">)</span></span></code></pre></div>
 </div>
 <div class="section level2">
-<h2 id="step-3-inspect-quality-of-indicators">Step 3: Inspect quality of indicators<a class="anchor" aria-label="anchor" href="#step-3-inspect-quality-of-indicators"></a>
+<h2 id="step-3-use-visualizations">Step 3: Use visualizations<a class="anchor" aria-label="anchor" href="#step-3-use-visualizations"></a>
 </h2>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="op">(</span><span class="fu"><a href="../reference/plot_ridge_distribution.html">plot_ridge_distribution</a></span><span class="op">(</span><span class="va">raw_data</span>, numeric_cols <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"FCSStap"</span>, <span class="st">"FCSPulse"</span>, <span class="st">"FCSPr"</span>, <span class="st">"FCSVeg"</span>, <span class="st">"FCSFruit"</span>, <span class="st">"FCSDairy"</span>, <span class="st">"FCSFat"</span>, <span class="st">"FCSSugar"</span><span class="op">)</span>,</span>
+<span>                         name_groups <span class="op">=</span> <span class="st">"Food Groups"</span>, name_units <span class="op">=</span> <span class="st">"Days"</span>, grouping <span class="op">=</span> <span class="st">"Area_Office"</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
+<p><img src="Cleaning_FSL_Indicators_files/figure-html/unnamed-chunk-4-1.png" width="768"></p>
 </div>
 <div class="section level2">
-<h2 id="step-4-generate-summary-reports">Step 4: Generate summary reports<a class="anchor" aria-label="anchor" href="#step-4-generate-summary-reports"></a>
+<h2 id="step-4-inspect-quality-of-dataindicators">Step 4: Inspect quality of data/indicators<a class="anchor" aria-label="anchor" href="#step-4-inspect-quality-of-dataindicators"></a>
 </h2>
-</div>
-<div class="section level2">
-<h2 id="step-5-export-cleaning-log-file">Step 5: Export cleaning log file<a class="anchor" aria-label="anchor" href="#step-5-export-cleaning-log-file"></a>
-</h2>
+<p>Now we have compute indicators and ready to inspect the data quality
+and flag all issues that need to be checked.</p>
 </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
     </nav></aside>

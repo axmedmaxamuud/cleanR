@@ -16,6 +16,9 @@
     <loc>/index.html</loc>
   </url>
   <url>
+    <loc>/reference/calculate_fsl_indicators.html</loc>
+  </url>
+  <url>
     <loc>/reference/check_duplicate_uuid.html</loc>
   </url>
   <url>
@@ -38,6 +41,9 @@
   </url>
   <url>
     <loc>/reference/log_sheet.html</loc>
+  </url>
+  <url>
+    <loc>/reference/plot_ridge_distribution.html</loc>
   </url>
   <url>
     <loc>/reference/survey_data.html</loc>
