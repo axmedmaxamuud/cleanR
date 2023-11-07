@@ -1,5 +1,5 @@
 ---
-title: "Cleaning food security indicators"
+title: "Cleaning Food Security Indicators"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{Cleaning_FSL_Indicators}
@@ -14,42 +14,84 @@ knitr::opts_chunk$set(
 )
 ```
 
-In this article, we'll explore the crucial process of inspecting and cleaning food security indicators, following the guidelines of the WFP indicator compendium. We ensure data quality by using the cleanR package and Survey Designer, allowing us to understand the reasons behind certain results and take corrective actions during field data collection.
+
+In this article, we’ll explore how to clean food security and livelihood data using cleanR package. The data needs to be aligned with WFP Survey Designer to ensure that variable naming’s are consistent. First, we’ll upload the raw data which is the version downloaded from the MoDa server. Then we’ll use the calculate_fsl_indicators function to compute all the FSL indicators. Then once we have calculated all the indicators, we’ll inspect the quality of data and indicator scores and generate cleaning log file that will help us collect feedbacks and understand the underlying causes of possible issues flagged and at the same time capture the correct values for any inconsistencies or mistakes identified.
 
 ## Step 1: Load packages & data
 
 ```{r, echo=TRUE, warning=FALSE, message=FALSE, comment=FALSE}
-
 # required packages
 library(tidyverse)
 library(cleanR)
 
 # load raw data
-moda_data <- cleanR::survey_data
+moda_data <- cleanR::survey_data %>% # converting HDDS variables to numeric
+  mutate(across(starts_with("HDDS"), as.numeric))
+
 
 ```
 
 ## Step 2: Format data
 
+Now we have the raw data, and therefore we will compute indicators so we can proceed to run in-depth checks on the data and inspect if there is any inconsistency that need to be checked.
 
 
-## Step 3: Inspect quality of indicators
+```{r}
+raw_data <- calculate_fsl_indicators(data = moda_data,
+                                 # FCS
+                                 FCSStap = "FCSStap", 
+                                 FCSPulse = "FCSPulse", 
+                                 FCSPr = "FCSPr", 
+                                 FCSVeg = "FCSVeg", 
+                                 FCSFruit = "FCSFruit",
+                                 FCSDairy = "FCSDairy", 
+                                 FCSFat = "FCSFat", 
+                                 FCSSugar = "FCSSugar", 
+                                 cutoff = "Cat28", 
+                                 # rCSI
+                                 rCSILessQlty = "rCSILessQlty", 
+                                 rCSIBorrow = "rCSIBorrow", 
+                                 rCSIMealSize = "rCSIMealSize", 
+                                 rCSIMealAdult = "rCSIMealAdult", 
+                                 rCSIMealNb = "rCSIMealNb",
+                                 # HHS
+                                 HHhSNoFood_FR = "HHhSNoFood_FR", 
+                                 HHhSBedHung_FR = "HHhSBedHung_FR", 
+                                 HHhSNotEat_FR = "HHhSNotEat_FR", 
+                                 # HDDS
+                                 # HDDSStapCer = "HDDSStapCer", 
+                                 # HDDSStapRoot = "HDDSStapRoot", 
+                                 # HDDSVeg = "HDDSVeg", 
+                                 # HDDSFruit = "HDDSFruit", 
+                                 # HDDSPrMeat = "HDDSPrMeat", 
+                                 # HDDSPrEgg = "HDDSPrEgg", 
+                                 # HDDSPrFish = "HDDSPrFish", 
+                                 # HDDSPulse = "HDDSPulse", 
+                                 # HDDSDairy = "HDDSDairy", 
+                                 # HDDSFat = "HDDSFat", 
+                                 # HDDSSugar = "HDDSSugar", 
+                                 # HDDSCond = "HDDSCond"
+                                 )
+
+
+```
+
+## Step 3: Use visualizations
+
+```{r, warning=FALSE, fig.width=8, fig.height=5, message=FALSE}
+(plot_ridge_distribution(raw_data, numeric_cols = c("FCSStap", "FCSPulse", "FCSPr", "FCSVeg", "FCSFruit", "FCSDairy", "FCSFat", "FCSSugar"),
+                         name_groups = "Food Groups", name_units = "Days", grouping = "Area_Office"))
+
+```
 
 
 
-## Step 4: Generate summary reports
+## Step 4: Inspect quality of data/indicators
+Now we have compute indicators and ready to inspect the data quality and flag all issues that need to be checked. 
 
+```{r}
 
-
-
-## Step 5: Export cleaning log file
-
-
-
-
-
-
-
+```
 
 
 
