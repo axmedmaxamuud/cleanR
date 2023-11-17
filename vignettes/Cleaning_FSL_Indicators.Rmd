@@ -14,26 +14,27 @@ knitr::opts_chunk$set(
 )
 ```
 
-
-In this article, we’ll explore how to clean food security and livelihood data using cleanR package. The data needs to be aligned with WFP Survey Designer to ensure that variable naming’s are consistent. First, we’ll upload the raw data which is the version downloaded from the MoDa server. Then we’ll use the calculate_fsl_indicators function to compute all the FSL indicators. Then once we have calculated all the indicators, we’ll inspect the quality of data and indicator scores and generate cleaning log file that will help us collect feedbacks and understand the underlying causes of possible issues flagged and at the same time capture the correct values for any inconsistencies or mistakes identified.
+Welcome to the cleanR package documentation! This guide is designed to assist the WFP team in cleaning food security and livelihood data using the cleanR package. Our goal is to streamline the data cleaning process, ensuring consistency with the WFP Survey Designer for standardized variable naming.
 
 ## Step 1: Load packages & data
+
+Start by uploading the raw data, typically the version downloaded from the MoDa server. Ensure that the data structure aligns with the WFP Survey Designer for consistent variable naming.
 
 ```{r, echo=TRUE, warning=FALSE, message=FALSE, comment=FALSE}
 # required packages
 library(tidyverse)
+library(DT)
 library(cleanR)
 
 # load raw data
 moda_data <- cleanR::survey_data %>% # converting HDDS variables to numeric
   mutate(across(starts_with("HDDS"), as.numeric))
 
-
 ```
 
 ## Step 2: Format data
 
-Now we have the raw data, and therefore we will compute indicators so we can proceed to run in-depth checks on the data and inspect if there is any inconsistency that need to be checked.
+The calculate_fsl_indicators function is a powerful tool for computing essential food security and livelihood (FSL) indicators, including the food consumption score, household dietary diversity, reduced coping strategy, and livelihood coping strategy, from your raw data.
 
 
 ```{r}
@@ -78,23 +79,44 @@ raw_data <- calculate_fsl_indicators(data = moda_data,
 
 ## Step 3: Use visualizations
 
+By incorporating ridge charts into your analysis, you can easily identify patterns and variations in FCS and rCSI across different clusters or field monitors. 
+
 ```{r, warning=FALSE, fig.width=8, fig.height=5, message=FALSE}
 (plot_ridge_distribution(raw_data, numeric_cols = c("FCSStap", "FCSPulse", "FCSPr", "FCSVeg", "FCSFruit", "FCSDairy", "FCSFat", "FCSSugar"),
                          name_groups = "Food Groups", name_units = "Days", grouping = "Area_Office"))
 
 ```
 
+By carefully examining and interpreting the ridge chart, you can gain valuable insights into the distributions and flag any inconsistency for validation and review during data collection. in the below chart, we'll group the reduced coping strategies at area office level.
 
 
-## Step 4: Inspect quality of data/indicators
-Now we have compute indicators and ready to inspect the data quality and flag all issues that need to be checked. 
+```{r, warning=FALSE, fig.width=8, fig.height=5, message=FALSE}
+(plot_ridge_distribution(raw_data, numeric_cols = c("rCSILessQlty", "rCSIBorrow", "rCSIMealSize", "rCSIMealAdult", "rCSIMealNb"),
+                         name_groups = "Food Coping Strategy", name_units = "Days", grouping = "Area_Office"))
 
-```{r}
+```
+
+similarly, you can group distributions at field monitor level to gain more insights at the consistency of reported distributions across different monitors. 
+
+```{r, warning=FALSE, fig.width=8, fig.height=5, message=FALSE}
+(plot_ridge_distribution(raw_data, numeric_cols = c("rCSILessQlty", "rCSIBorrow", "rCSIMealSize", "rCSIMealAdult", "rCSIMealNb"),
+                         name_groups = "Food Coping Strategy", name_units = "Days", grouping = "EnumName"))
 
 ```
 
 
+## Step 4: Generate cleaning log file
 
+To facilitate collaboration and feedback collection, generate a cleaning log file. This log file will document flagged issues, providing insights into potential problems and capturing correct values for any identified inconsistencies.
+
+
+```{r}
+fsl_clog <- fsl_cleaning_log(data = raw_data, uuid = "uuid")
+
+datatable(fsl_clog, list(dom = 't'))
+```
+
+Congratulations on successfully generating the cleaning log! To proceed, refer to the additional documentation for guidance on incorporating the corrected cleaning log file into the raw data to generate the clean dataset.
 
 
 

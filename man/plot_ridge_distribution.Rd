@@ -20,5 +20,5 @@ plot_ridge_distribution(
 \item{title_name}{}
 }
 \description{
-plot ridge distribution
+credit goes to Sa'eed Rahman
 }
