@@ -16,7 +16,7 @@ knitr::opts_chunk$set(
 
 Welcome to the cleanR package documentation! This guide is designed to assist the WFP team in cleaning food security and livelihood data using the cleanR package. Our goal is to streamline the data cleaning process, ensuring consistency with the WFP Survey Designer for standardized variable naming.
 
-## Step 1: Load packages & data
+## Step 1: Load data
 
 Start by uploading the raw data, typically the version downloaded from the MoDa server. Ensure that the data structure aligns with the WFP Survey Designer for consistent variable naming.
 
@@ -96,7 +96,7 @@ By carefully examining and interpreting the ridge chart, you can gain valuable i
 
 ```
 
-similarly, you can group distributions at field monitor level to gain more insights at the consistency of reported distributions across different monitors. 
+similarly, you can group distributions at field monitor level to gain more insight at the consistency of reported distributions across different monitors.
 
 ```{r, warning=FALSE, fig.width=8, fig.height=5, message=FALSE}
 (plot_ridge_distribution(raw_data, numeric_cols = c("rCSILessQlty", "rCSIBorrow", "rCSIMealSize", "rCSIMealAdult", "rCSIMealNb"),
@@ -116,7 +116,7 @@ fsl_clog <- fsl_cleaning_log(data = raw_data, uuid = "uuid")
 datatable(fsl_clog, list(dom = 't'))
 ```
 
-Congratulations on successfully generating the cleaning log! To proceed, refer to the additional documentation for guidance on incorporating the corrected cleaning log file into the raw data to generate the clean dataset.
+Congratulations on generating the cleaning log! To proceed, refer to the other documentation for incorporating the corrected cleaning log file into the raw data to generate the clean data. 
 
 
 
