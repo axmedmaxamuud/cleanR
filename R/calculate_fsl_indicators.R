@@ -141,6 +141,8 @@ calculate_fsl_indicators <- function(data,
 
 #' plot ridge distribution
 #'
+#' credit goes to Sa'eed Rahman
+#'
 #' @param df
 #' @param numeric_cols
 #' @param name_groups
