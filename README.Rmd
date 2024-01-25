@@ -13,7 +13,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-# cleanR
+# cleanR <img src='man/figures/logo.png' align="right" height="64.5" />
 
 <!-- badges: start -->
 
@@ -52,8 +52,8 @@ head(my_logbook)
 Now you can inspect the data and use the log_issue() to write the observations of the data that you find with the issues in the logbook.
 
 ```{r}
-check_age <- data %>% 
-  filter(ki_age < 15) %>% 
+check_age <- survey_data %>% 
+  filter(RESPAge < 15) %>% 
   log_sheet(question.name = "ki_age",
             issue = "respondent is under 15 years old",
             action = "delete")
